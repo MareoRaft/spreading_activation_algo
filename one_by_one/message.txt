@@ -1,0 +1,13 @@
+
+
+
+So I wanted to show you this "one-by-one" algorithm which processes nodes one at a time.  It is simpler than some other approaches and has the benefit that it generalizes to non-stepwise situations.  So you can have links that take non-integer amounts of time to process and it can handle them.  It simply uses a priority queue (it's actually a heap) to store nodes as they are visited and keep track of when they will get activated timewise.
+
+Next time I email you I am going to show you a version of the algorithm where it must be stepwise and exploits this fact in order to process a bunch of nodes at the same time.  And after that I'll probably look to add parallelization.
+
+
+
+I'd also like to look into using threads or subprocesses, feedback, learning, etc., but I'd rather send you updates as I go than spend a lot of time building something complex and then sending it all at once.
+
+I don't know what preferences you may have for code organization.  When I work professionally as a software engineer we break things up into separate files and follow a bunch of best practices, but in Colab I found it more convenient to keep everything in a single notebook.  I also wrote some unit tests alongside the code which I've removed as to not distract from the algorithm itself.  I left the end-to-end tests at the bottom, to run the algo on some example graphs.  I'm going to programmatically produce a much larger graph to run it on also in the next update.
+
